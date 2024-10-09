@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript_day_Seven_numbers</title>
+  </head>
+  <body>
+    <!-- JavaScript has only one type of number. Numbers can be written with or without decimals. -->
+    <p id="demo"></p>
+    <script>
+      let x = 12;
+      let y = 13.1;
+      let z = 123e5;
+      let a = x + y;
+      document.write(a);
+    </script>
+    <p id="demo1"></p>
+    <script>
+      // by using string we are not able to do the opertors work, it will only provide string concatenations
+
+      let m = "23";
+      let n = "12";
+      let o = m + n;
+      document.write(o);
+    </script>
+    <script>
+      let i = 33;
+      let j = "32";
+      let k = i + j;
+      document.write(k);
+    </script>
+    <p>JavaScript will try to convert strings to numbers when subtracting:</p>
+    <script>
+      let p = "20";
+      let q = "10";
+      let r = p - q;
+      document.write(r);
+    </script>
+    <script>
+      let a1 = "123";
+      let a2 = "123";
+      let a3 = a1 * a2;
+      document.write(a3);
+    </script>
+    <p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+
+    <p id="demonan"></p>
+
+    <script>
+      document.getElementById("demonan").innerHTML = 100 / "Apple";
+    </script>
+    <p id="demonancheck"></p>
+
+    <script>
+      let nancheck = 100 / "Apple";
+      document.getElementById("demonancheck").innerHTML = isNaN(nancheck);
+    </script>
+
+    <p id="demo inf"></p>
+    <!-- 0x1A represents the decimal number 26.
+         0xFF represents 255 in decimal. -->
+         <script>
+            let hexade = 0xFF;
+
+            console.log(hexade)
+         </script>
+         <p id="jsnum"></p>
+         <p>The toString() method can output numbers from base 2 to 36:</p>
+
+         <script>
+            let jsNumber = 2;
+            document.getElementById("jsnum").innerHTML =
+            "Decimal 32 = " + "<br><br>" + 
+            
+            "Hexatrigesimal (base 36): " + jsNumber.toString(36) + "<br>" +
+            "Duotrigesimal (base 32): " + jsNumber.toString(32) + "<br>" +
+            "Hexadecimal (base 16): " + jsNumber.toString(16) + "<br>" +
+            "Duodecimal (base 12): " + jsNumber.toString(12) + "<br>" +
+            "Decimal (base 10): " + jsNumber.toString(10) + "<br>" +
+            "Octal (base 8): " + jsNumber.toString(8) + "<br>" +
+            "Binary (base 2): " + jsNumber.toString(2);
+            </script>
+<p id="newobj"></p>
+<script>
+    let num01=23
+    let num02=new Number(23);
+    document .write(typeof(num01)+"<br>"+ typeof(num02))
+
+</script>
+
+<!-- JavaScript BigInt variables are used to store big integer values that are too big to be represented by a normal JavaScript Number. -->
+<!-- JavaScript integers are only accurate up to 15 digits:    -->
+ <!-- let x = 1234567890123456789012345n;
+let y = BigInt(1234567890123456789012345) -->
+<script>
+let xbig = 9007199254740995n;
+let ybig = 9007199254740995n;
+let zbig = xbig * ybig;
+document.write(zbig)
+</script>
+<!-- A BigInt can not have decimals. -->
+ <!-- BigInt can also be written in hexadecimal, octal, or binary notation:
+
+ -->
+ <p>The toString() method converts a number to a string.</p>
+<p id="tostring"></p>
+<script>
+    let tos=123
+    document.write(tos.toString())
+</script>
+<p id="numbervar"></p>
+
+<script src="index.js"></script>
+  </body>
+</html>
