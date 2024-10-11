@@ -60,57 +60,112 @@
     <p id="demo inf"></p>
     <!-- 0x1A represents the decimal number 26.
          0xFF represents 255 in decimal. -->
-         <script>
-            let hexade = 0xFF;
+    <script>
+      let hexade = 0xff;
 
-            console.log(hexade)
-         </script>
-         <p id="jsnum"></p>
-         <p>The toString() method can output numbers from base 2 to 36:</p>
+      console.log(hexade);
+    </script>
+    <p id="jsnum"></p>
+    <p>The toString() method can output numbers from base 2 to 36:</p>
 
-         <script>
-            let jsNumber = 2;
-            document.getElementById("jsnum").innerHTML =
-            "Decimal 32 = " + "<br><br>" + 
-            
-            "Hexatrigesimal (base 36): " + jsNumber.toString(36) + "<br>" +
-            "Duotrigesimal (base 32): " + jsNumber.toString(32) + "<br>" +
-            "Hexadecimal (base 16): " + jsNumber.toString(16) + "<br>" +
-            "Duodecimal (base 12): " + jsNumber.toString(12) + "<br>" +
-            "Decimal (base 10): " + jsNumber.toString(10) + "<br>" +
-            "Octal (base 8): " + jsNumber.toString(8) + "<br>" +
-            "Binary (base 2): " + jsNumber.toString(2);
-            </script>
-<p id="newobj"></p>
-<script>
-    let num01=23
-    let num02=new Number(23);
-    document .write(typeof(num01)+"<br>"+ typeof(num02))
+    <script>
+      let jsNumber = 2;
+      document.getElementById("jsnum").innerHTML =
+        "Decimal 32 = " +
+        "<br><br>" +
+        "Hexatrigesimal (base 36): " +
+        jsNumber.toString(36) +
+        "<br>" +
+        "Duotrigesimal (base 32): " +
+        jsNumber.toString(32) +
+        "<br>" +
+        "Hexadecimal (base 16): " +
+        jsNumber.toString(16) +
+        "<br>" +
+        "Duodecimal (base 12): " +
+        jsNumber.toString(12) +
+        "<br>" +
+        "Decimal (base 10): " +
+        jsNumber.toString(10) +
+        "<br>" +
+        "Octal (base 8): " +
+        jsNumber.toString(8) +
+        "<br>" +
+        "Binary (base 2): " +
+        jsNumber.toString(2);
+    </script>
+    <p id="newobj"></p>
+    <script>
+      let num01 = 23;
+      let num02 = new Number(23);
+      document.write(typeof num01 + "<br>" + typeof num02);
+    </script>
 
-</script>
-
-<!-- JavaScript BigInt variables are used to store big integer values that are too big to be represented by a normal JavaScript Number. -->
-<!-- JavaScript integers are only accurate up to 15 digits:    -->
- <!-- let x = 1234567890123456789012345n;
+    <!-- JavaScript BigInt variables are used to store big integer values that are too big to be represented by a normal JavaScript Number. -->
+    <!-- JavaScript integers are only accurate up to 15 digits:    -->
+    <!-- let x = 1234567890123456789012345n;
 let y = BigInt(1234567890123456789012345) -->
-<script>
-let xbig = 9007199254740995n;
-let ybig = 9007199254740995n;
-let zbig = xbig * ybig;
-document.write(zbig)
-</script>
-<!-- A BigInt can not have decimals. -->
- <!-- BigInt can also be written in hexadecimal, octal, or binary notation:
+    <script>
+      let xbig = 9007199254740995n;
+      let ybig = 9007199254740995n;
+      let zbig = xbig * ybig;
+      document.write(zbig);
+    </script>
+    <!-- A BigInt can not have decimals. -->
+    <!-- BigInt can also be written in hexadecimal, octal, or binary notation:
 
  -->
- <p>The toString() method converts a number to a string.</p>
-<p id="tostring"></p>
-<script>
-    let tos=123
-    document.write(tos.toString())
-</script>
-<p id="numbervar"></p>
+    <p>The toString() method converts a number to a string.</p>
+    <p id="tostring"></p>
+    <script>
+      let tos = 123;
+      document.write(tos.toString());
+    </script>
+    <p id="numbervar"></p>
 
-<script src="index.js"></script>
+    <p>The Number() method can convert a date to a number:</p>
+    <script>
+      let date = new Date("1970-01-01");
+      console.log(Number(date));
+    </script>
+    parseInt() parses a string and returns a whole number. Spaces are allowed.
+    Only the first number is returned:
+    <p id="parseint"></p>
+    <script>
+      document.getElementById("parseint").innerHTML =
+        parseInt("-10") +
+        "<br>" +
+        parseInt("-10.33") +
+        "<br>" +
+        parseInt("10") +
+        "<br>" +
+        parseInt("10.33") +
+        "<br>" +
+        parseInt("10 6") +
+        "<br>" +
+        parseInt("10 years") +
+        "<br>" +
+        parseInt("years 10");
+    </script>
+    parseFloat() parses a string and returns a number. Spaces are allowed. Only
+    the first number is returned:
+
+    <p>
+      Method Description Number.isInteger() Returns true if the argument is an
+      integer Number.isSafeInteger() Returns true if the argument is a safe
+      integer Number.parseFloat() Converts a string to a number
+      Number.parseInt() Converts a string to a whole number
+    </p>
+
+    <h3>JavaScript Number Properties</h3>
+    <p>
+      Property Description EPSILON The difference between 1 and the smallest
+      number > 1. MAX_VALUE The largest number possible in JavaScript MIN_VALUE
+      The smallest number possible in JavaScript MAX_SAFE_INTEGER The maximum
+      safe integer (253 - 1) MIN_SAFE_INTEGER The minimum safe integer -(253 -
+      1) POSITIVE_INFINITY Infinity (returned on overflow) NEGATIVE_INFINITY
+      Negative infinity (returned on overflow) NaN A "Not-a-Number" value
+    </p>
+    <script src="index.js"></script>
   </body>
 </html>

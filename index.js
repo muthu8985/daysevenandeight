@@ -35,33 +35,38 @@ console.log(typeof infb);
 // finding the type of infinity
 
 // toExponential() returns a string, with a number rounded and written using exponential notation.
-let expo=23.233455
-document.write(expo.toExponential(3))
+let expo = 23.233455;
+document.write(expo.toExponential(3));
 // toFixed() returns a string, with the number written with a specified number of decimals:
-let tofix=8955.9039303
-document.write(tofix.toFixed(4))
+let tofix = 8955.9039303;
+document.write(tofix.toFixed(4));
 // toPrecision() returns a string, with a number written with a specified length:
-let topre=234.23
-document.write(topre.toPrecision()
-)
+let topre = 234.23;
+document.write(topre.toPrecision());
 // valueOf() returns a number as a number.
 
-let value=245;
-document.write(value.valueOf())
+let value = 245;
+document.write(value.valueOf());
 
 // converting variables to numbers
 
-
-
-document.getElementById("numbervar").innerHTML=
-
-  Number(true) + "<br>" +
-  Number(false) + "<br>" +
-  Number("10") + "<br>" + 
-  Number("  10") + "<br>" +
-  Number("10  ") + "<br>" +
-  Number(" 10  ") + "<br>" +
-  Number("10.33") + "<br>" + 
-  Number("10,33") + "<br>" +
-  Number("10 33") + "<br>" +
+document.getElementById("numbervar").innerHTML =
+  Number(true) +
+  "<br>" +
+  Number(false) +
+  "<br>" +
+  Number("10") +
+  "<br>" +
+  Number("  10") +
+  "<br>" +
+  Number("10  ") +
+  "<br>" +
+  Number(" 10  ") +
+  "<br>" +
+  Number("10.33") +
+  "<br>" +
+  Number("10,33") +
+  "<br>" +
+  Number("10 33") +
+  "<br>" +
   Number("John");
